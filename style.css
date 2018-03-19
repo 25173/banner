@@ -1,0 +1,157 @@
+.fb{
+    height: 728px;
+    width: 90px;
+    border: 1px solid grey;
+    box-sizing: border-box;
+    font-size: 2em;
+    overflow: hidden;
+    background: url("img/schermCode.png");
+    color: #fff;
+    background-size: cover;
+    animation: achterAnimatie 8s alternate infinite;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    cursor: pointer;
+    margin-left: 200px;
+}
+
+@keyframes achterAnimatie {
+    0% , 10% {background-position: left}
+    90%, 100% {background-position: right}
+}
+
+.fb-laag1{
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    width: 90px;
+    transition: margin-left .5s cubic-bezier(.29,1.92,.54,-1.21);
+
+
+}
+
+.fb-laag1> div{
+    height: 50px;
+    line-height: 58px;
+
+}
+
+.fb__wat,.fb__Tim, .fb__Weet, .fb__ballon, .fb__css, .fb__html5, .fb__js{
+    transition: transform .5s cubic-bezier(.29,1.92,.54,-1.21);
+}
+.fb__wat.fb--uit{
+    transform: translateX(-90px);
+}
+.fb__Tim.fb--uit{
+    transform: translateX(90px);
+}
+
+.fb__Weet.fb--uit{
+     transform: translateX(-90px);
+ }
+
+.fb__waggel{
+    display: inline-block;
+}
+
+.fb__waggel.fb--waggel{
+    animation: waggelen 1s forwards;
+}
+
+@keyframes waggelen {
+    0%, 70%, 100% {transform: rotate(0)}
+    10% { transform: rotate(-23deg)}
+    20% { transform: rotate(20deg)}
+    30% { transform: rotate(-10deg)}
+    40% { transform: rotate( 10deg)}
+    50% { transform: rotate(-6deg)}
+    60% { transform: rotate(3deg)}
+
+
+}
+
+
+.fb__nl{
+    color: #333;
+    z-index: 2;
+}
+
+.fb-laag1 .fb__ballon{
+    width: 1.7em;
+    height: 1.7em;
+    background: #fff;
+    border-radius: 1em ;
+    align-self: center;
+    transform: translateY(-5.5em) translateX(0.6em);
+}
+
+.fb-laag1 .fb__ballon.fb--uit{
+    transform: translateY(-5.5em) translateX(90px);
+}
+
+.fb:hover .fb__ballon{
+    background: orange;
+}
+
+
+.fb__tut{
+    display: grid;
+    grid-template-columns:  1fr;
+    line-height: 46px;
+    text-align: center;
+}
+
+
+.fb__tut.fb--uit span{
+    /*display: inline-block;*/
+    animation: blob .7s forwards;
+    opacity: 0;
+}
+
+@keyframes blob {
+    0% { opacity: 0; transform: scale(9)}
+    90% { opacity: 1; transform: scale(.9)}
+    100% { opacity: 1; transform: scale(1)}
+
+}
+.fb__tut.fb--uit .l2 {animation-delay: .1s}
+.fb__tut.fb--uit .l3 {animation-delay: .2s}
+.fb__tut.fb--uit .l4 {animation-delay: .3s}
+.fb__tut.fb--uit .l5 {animation-delay: .4s}
+.fb__tut.fb--uit .l6 {animation-delay: .5s}
+.fb__tut.fb--uit .l7 {animation-delay: .6s}
+.fb__tut.fb--uit .l8 {animation-delay: .7s}
+.fb__tut.fb--uit .l9 {animation-delay: .8s}
+
+.fb-laag1.fb--uit{
+    margin-left: -90px;
+}
+
+.fb-laag2{
+    display: grid;
+    grid-template-columns:1fr;
+    background: rgba(255,255,255,0.5);
+    line-height: 60px;
+    /*overflow: hidden;*/
+}
+
+.fb__html5, .fb__css{
+    width: 80px;
+}
+.fb__html5.fb--uit{
+    transform: translateX(-90px);
+}
+
+.fb__css.fb--uit{
+    transform: translateX(90px);
+}
+
+
+.fb__js{
+    height: 88px;
+}
+
+.fb__js.fb--uit{
+    transform: translatey(90px);
+}
